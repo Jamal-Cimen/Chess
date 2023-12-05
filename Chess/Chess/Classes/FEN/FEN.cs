@@ -1,30 +1,22 @@
-using System;
 using Chess.Classes.Board;
-using System.Collections.Generic;
-using Chess;
-using System.Windows.Controls;
 using Chess.Classes.Utils;
-using Chess.Classes.Piece.Pieces;
-using System.Diagnostics;
 using Chess.Classes.Utils.Types;
 
 namespace Chess.Classes.FEN
 {
-    public class FEN
+	public class FEN
     {
-        private string Fen;
-        private BoardManager boardManager;
+        private string _fen;
 
-        public FEN(string FEN)
+        public FEN(string fen)
         {
-            Fen = FEN;
-            boardManager = new();
+            _fen = fen;
             ReadFEN();
         }
 
         private void ReadFEN()
         {
-            char[] piecePosition = Fen.ToCharArray();
+            char[] piecePosition = _fen.ToCharArray();
             Vector2 positon = new(0, 0);
 
             foreach (char piece in piecePosition)
@@ -39,7 +31,7 @@ namespace Chess.Classes.FEN
                     }
                     else
                     {
-                        boardManager.AddPieceToBoard(piece, positon, GetColor(piece));
+						BoardManager.boardManager.AddPieceToBoard(piece, positon, GetColor(piece));
                         positon.X++;
                     }
                 }

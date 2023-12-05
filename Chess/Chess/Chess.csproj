@@ -7,6 +7,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
   <ItemGroup>
   <Folder Include="Classes\" />
   <Folder Include="Test\" />
@@ -27,6 +31,10 @@
     <None Remove="Mats\b_queen.png" />
     <None Remove="Mats\b_rook.png" />
   </ItemGroup>
+
+ <ItemGroup>
+   <Content Include="rooki.ico" />
+ </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Mats\bishop.png">

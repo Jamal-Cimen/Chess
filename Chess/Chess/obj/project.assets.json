@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jamal\\Desktop\\Chess\\Chess\\Chess.csproj",
+      "projectUniqueName": "C:\\Users\\jamal\\Documents\\GitHub\\Chess\\Chess\\Chess\\Chess.csproj",
       "projectName": "Chess",
-      "projectPath": "C:\\Users\\jamal\\Desktop\\Chess\\Chess\\Chess.csproj",
+      "projectPath": "C:\\Users\\jamal\\Documents\\GitHub\\Chess\\Chess\\Chess\\Chess.csproj",
       "packagesPath": "C:\\Users\\jamal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jamal\\Desktop\\Chess\\Chess\\obj\\",
+      "outputPath": "C:\\Users\\jamal\\Documents\\GitHub\\Chess\\Chess\\Chess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

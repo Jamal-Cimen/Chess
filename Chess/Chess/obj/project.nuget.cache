@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YG+t+QZKqDFULeh9nyg5V6VzCx+ZfF3oB39UKAq4NS311JYeLce/NxGVaHMcqUMLd6bkjhWqoEdzeAnCDmF7yQ==",
+  "dgSpecHash": "nZOyg42nVpDSB4xCEMzlSJIJRD4VcDkuQ8pfLsA+RABTfFRUETiICSj3mfTC/sLue/znpzsIDBs6LwSFW4HUBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jamal\\Desktop\\Chess\\Chess\\Chess.csproj",
+  "projectFilePath": "C:\\Users\\jamal\\Documents\\GitHub\\Chess\\Chess\\Chess\\Chess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

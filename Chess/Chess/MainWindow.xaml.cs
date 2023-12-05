@@ -21,6 +21,7 @@ using System.IO;
 using Chess.Classes.Utils;
 using Microsoft.VisualBasic;
 using Chess.Classes.Piece;
+using System.Numerics;
 
 namespace Chess
 {
@@ -36,12 +37,12 @@ namespace Chess
             InitializeComponent();
             _Current = this;
 
-            //Directory.SetCurrentDirectory("C:\\Users\\jamal\\Desktop\\Chess\\Chess\\");
-
             ChessBoard chessBoard = new();
             chessBoard.CreatePlayBoard("#ffffff", "#090820");
 
-            FEN fen = new("4K3/8/8/5K2/8/8/6k1/7k");
+            new BoardManager();
+
+            new FEN("4K/8/8/5K/8/8/6k/7k");
         }
 
         private void OnMouseMove(object sender, MouseEventArgs e)
@@ -55,8 +56,6 @@ namespace Chess
 
                 Debug.WriteLine("Column: " + column);
                 Debug.WriteLine("Row: " + row);
-
-                Debug.WriteLine("Pos: " + Grid.get);
             }
         }
 

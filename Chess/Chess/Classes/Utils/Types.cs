@@ -13,7 +13,7 @@ namespace Chess.Classes.Utils.Types
         B_Rook = 'R',
         B_Bishop = 'B',
         B_Knight = 'N',
-        B_Pawn = 'P',
+        B_Pawn = 'P',s
     }
 
     public enum Colors
