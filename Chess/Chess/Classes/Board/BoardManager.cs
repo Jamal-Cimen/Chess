@@ -2,10 +2,10 @@ using System;
 using Chess.Classes.Utils;
 using Chess.Classes.Piece.Pieces;
 using System.Collections.Generic;
-using Chess.Classes.Utils.Types;
 using Chess.Classes.Piece;
 using System.Windows.Controls;
 using System.Diagnostics;
+using System.Windows.Media.Converters;
 
 namespace Chess.Classes.Board
 {
@@ -16,6 +16,11 @@ namespace Chess.Classes.Board
     public class BoardManager
     {
 		public static BoardManager boardManager;
+
+		public Colors whosTurn = Colors.white;
+
+		public List<PieceBase> BlackPieces = new();
+		public List<PieceBase> WhitePieces = new();
 
 		public PieceBase[,] PiecePositions = new PieceBase[8, 8];
 		public PieceBase _selectedPiece;
@@ -45,7 +50,7 @@ namespace Chess.Classes.Board
 
 				_selectedPosition = value;
 				SelectedPiece = null;
-				Debug.WriteLine(PiecePositions[SelectedPiece.Positon.X, SelectedPiece.Positon.Y]);
+				//Debug.WriteLine(PiecePositions[SelectedPiece.Positon.X, SelectedPiece.Positon.Y]);
 			}
 		}
 
@@ -73,6 +78,11 @@ namespace Chess.Classes.Board
         public PieceBase AddPieceToBoard(char piece, Vector2 position, Colors color)
         {
 			PieceBase piecebase = Activator.CreateInstance(pieces[piece], position, color) as PieceBase;
+
+			if (piecebase.Color == Colors.Black)
+				BlackPieces.Add(piecebase);
+			else
+				WhitePieces.Add(piecebase);
 
 			PiecePositions[position.X, position.Y] = piecebase;
 

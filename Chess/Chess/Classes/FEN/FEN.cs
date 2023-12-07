@@ -1,6 +1,5 @@
 using Chess.Classes.Board;
 using Chess.Classes.Utils;
-using Chess.Classes.Utils.Types;
 
 namespace Chess.Classes.FEN
 {

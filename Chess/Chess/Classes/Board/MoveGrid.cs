@@ -20,15 +20,18 @@ namespace Chess.Classes.Board
 
 		private void ShowLegalMoves()
 		{
-			Rectangle rect = new();
+			if (Direction.Y is > -1 and < 8 && Direction.X is > -1 and < 8)
+			{
+				Rectangle rect = new();
 
-			rect.Fill = System.Windows.Media.Brushes.Green;
-			rect.Opacity = 0.3;
+				rect.Fill = System.Windows.Media.Brushes.Green;
+				rect.Opacity = 0.3;
 
-			Grid.SetColumn(rect, Direction.X);
-			Grid.SetRow(rect, Direction.Y);
+				Grid.SetColumn(rect, Direction.X);
+				Grid.SetRow(rect, Direction.Y);
 
-			MainWindow._Current.chessBoard.Children.Add(rect);
+				MainWindow._Current.chessBoard.Children.Add(rect);
+			}
 		}
 	}
 }

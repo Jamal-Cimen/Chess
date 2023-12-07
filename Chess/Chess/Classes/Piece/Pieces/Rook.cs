@@ -1,6 +1,5 @@
 using System;
 using Chess.Classes.Utils;
-using Chess.Classes.Utils.Types;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
@@ -16,7 +15,7 @@ namespace Chess.Classes.Piece.Pieces
 			PieceImage = CreatePiece();
 		}
 
-		public override Image CreatePiece()
+		protected override Image CreatePiece()
 		{
 			Image image = new();
 
@@ -39,9 +38,11 @@ namespace Chess.Classes.Piece.Pieces
 			return image;
 		}
 
-		public override void CalculateAllLegalMoves()
+		protected override void CalculateAllLegalMoves()
 		{
-			
+			LegalMoves.Clear();
+
+			CalculateStraightMoves();
 		}
 	}
 }

@@ -1,4 +1,4 @@
-namespace Chess.Classes.Utils.Types
+namespace Chess.Classes.Utils
 {
     public enum PieceTypes
     {

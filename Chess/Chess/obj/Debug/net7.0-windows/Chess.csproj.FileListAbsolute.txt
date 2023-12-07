@@ -39,3 +39,4 @@ C:\Users\jamal\Documents\GitHub\Chess\Chess\Chess\obj\Debug\net7.0-windows\Chess
 C:\Users\jamal\Documents\GitHub\Chess\Chess\Chess\obj\Debug\net7.0-windows\Chess.genruntimeconfig.cache
 C:\Users\jamal\Documents\GitHub\Chess\Chess\Chess\obj\Debug\net7.0-windows\ref\Chess.dll
 C:\Users\jamal\Documents\GitHub\Chess\Chess\Chess\obj\Debug\net7.0-windows\Chess_Content.g.cs
+C:\Users\jamal\Documents\GitHub\Chess\Chess\Chess\obj\Debug\net7.0-windows\Chess.sourcelink.json
