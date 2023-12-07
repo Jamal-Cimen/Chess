@@ -1,4 +1,8 @@
+using Chess.Classes.Utils;
+using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -26,20 +30,32 @@ namespace Chess.Classes.Board
 
         private void CreateField(int row, int column, string colorWhite, string colorBlack)
         {
-            Rectangle rect = new();
+            Rectangle field = new();
 
             if (isWhite)
             {
-                rect.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(colorWhite);
+                field.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(colorWhite);
             }
             else
             {
-                rect.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(colorBlack);
+                field.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(colorBlack);
             }
 
-            Grid.SetColumn(rect, column);
-            Grid.SetRow(rect, row);
-            MainWindow._Current.chessBoard.Children.Add(rect);
+            field.MouseUp += OnMouseUp;
+
+            Grid.SetColumn(field, column);
+            Grid.SetRow(field, row);
+            MainWindow._Current.chessBoard.Children.Add(field);
         }
+
+        private void OnMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Point point = e.GetPosition(MainWindow._Current.chessBoard);
+
+			int column = (int)(point.X / MainWindow._Current.chessBoard.ColumnDefinitions[0].ActualWidth);
+			int row = (int)(point.Y / MainWindow._Current.chessBoard.RowDefinitions[0].ActualHeight);
+
+            BoardManager.boardManager.SelectedPostion = new(column, row);
+		}
     }
 }

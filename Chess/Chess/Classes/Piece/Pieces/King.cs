@@ -3,18 +3,22 @@ using Chess.Classes.Utils;
 using Chess.Classes.Utils.Types;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Collections.Generic;
 
 namespace Chess.Classes.Piece.Pieces
 {
 	public class King : PieceBase
     {
+        private List<Vector2> _possibleMoves = new();
+
         public King(Vector2 positon, Colors color)
         {
             Positon = positon;
             Color = color;
 
             PieceImage = CreatePiece();
-        }
+
+		}
 
         public override Image CreatePiece()
         {
@@ -38,5 +42,10 @@ namespace Chess.Classes.Piece.Pieces
 
             return image;
         }
-    }
+
+		public override void CalculateAllLegalMoves()
+		{
+            CalculateStraightMoves();
+		}
+	}
 }

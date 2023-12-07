@@ -12,7 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-  <Folder Include="Classes\" />
   <Folder Include="Test\" />
   <Folder Include="Mats\" />
   </ItemGroup>

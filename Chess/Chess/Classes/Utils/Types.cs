@@ -21,4 +21,19 @@ namespace Chess.Classes.Utils.Types
         Black,
         white
     }
+
+    public enum FieldStates
+    {
+        Empty,
+        Full
+    }
+
+    public enum MoveTypes
+    {
+        Linear,
+        Diagonal,
+        King,
+        Queen,
+        Rook
+    }
 }

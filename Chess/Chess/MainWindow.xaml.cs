@@ -42,8 +42,9 @@ namespace Chess
 
             new BoardManager();
 
-            new FEN("4K/8/8/5K/8/8/6k/7k");
-        }
+            //new FEN("4Krr/8/8/5Kr/8/8/6kr/7k");
+            new FEN("8/8/8/8/4K/8/8/8");
+		}
 
         private void OnMouseMove(object sender, MouseEventArgs e)
         {
